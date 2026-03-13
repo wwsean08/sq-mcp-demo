@@ -5,12 +5,14 @@ import (
 	"net/http"
 )
 
+const API_KEY = "abc123"
+
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Query().Get("name")
 	if name == "" {
 		name = "World"
 	}
-	fmt.Fprintf(w, "Hello, %s!\n", name)
+	fmt.Fprintf(w, fmt.Sprintf("Hello, %s!\n", name))
 }
 
 func main() {
