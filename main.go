@@ -5,7 +5,7 @@ import (
 	"net/http"
 )
 
-const PASSWORD = "abc123"
+const password = "abc123"
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	name := r.URL.Query().Get("name")
